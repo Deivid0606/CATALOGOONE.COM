@@ -1123,8 +1123,9 @@
         return;
       }
 
-      if (!WHATSAPP_NUMBER || WHATSAPP_NUMBER === "595992526814"){
-        alert("Falta configurar el número de WhatsApp en el código (WHATSAPP_NUMBER).");
+      // CORRECCIÓN: Esta condición estaba mal, siempre se cumplía
+      if (!WHATSAPP_NUMBER || WHATSAPP_NUMBER.length < 10){
+        alert("Error: El número de WhatsApp no está configurado correctamente.");
         return;
       }
 
